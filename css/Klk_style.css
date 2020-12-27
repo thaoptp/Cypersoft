@@ -1,0 +1,44 @@
+/* thẻ block width = 100%
+thẻ inline width=nội dung
+the p la block 
+span inline  */
+* {
+  /* * tat ca cac the */
+  margin: 0px;
+  padding: 0px;
+}
+.header ul {
+  background-color: black;
+
+  padding: 10px;
+}
+.header ul li {
+  /* chỉnh thành inline */
+  display: inline;
+  margin: 10px 10px;
+}
+.header ul li a {
+  /* tat gach ngang */
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+/* carousel */
+.carousel {
+  background-image: url(./img-layout-2/slider_1.jpg);
+  background-repeat: no-repeat;
+  /* rong het muc div */
+  background-size: cover;
+  height: 500px;
+  /* vi tri hinh nen  */
+  background-position: center;
+}
+/* intro */
+.intro{
+    margin: 30px 0px;
+}
+
+.intro .description span{
+    font-weight: bold;
+    color: red;red;
+}
