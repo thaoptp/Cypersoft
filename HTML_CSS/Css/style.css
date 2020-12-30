@@ -1,0 +1,16 @@
+h1{
+    background-color: pink;
+    text-align: center;
+}
+#test{
+    background-color: sandybrown;
+}
+.test{
+    background-color: springgreen ;
+}
+#test.test{
+    background-color: rgb(216, 181, 23) ;
+}
+/* h1#test.test{
+    background-color: rgb(236, 245, 240) ;
+} */
