@@ -1,0 +1,36 @@
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+header{
+    background-color:#4e2a84 ;
+}
+header ul{
+    /* Xóa dấu tròn của danh sách */
+    list-style: none;
+}
+
+header ul a{
+    /* xóa gạch dưới của thẻ a */
+    text-decoration: none;
+    color: white;
+}
+
+header li{
+    display: inline;
+}
+
+.header__content{
+    /* căn giữa nội dung của 1 phần chính, căn giữa theo chiều ngang */
+    width: 70%;
+    margin:0 auto;
+
+
+}

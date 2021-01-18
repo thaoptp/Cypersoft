@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- khai báo phiên bản html - phiên bản 5 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- -khai bao ngon ngu co dau -->
+    <meta name="description" content="Demo HTMl" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo HTML</title>
+  </head>
+  <body>
+    <!-- BUỔI 1  -->
+    <!-- CSS inline- điền trực tiếp vào thẻ  -->
+    <h1 style="background: red; color: white; text-align: center">
+      THE COFFEE HOUSE
+    </h1>
+    <hr style="height: 5px; width: 50%" noshade />
+    <!-- noshade- k đổ bóng , phủ màu  -->
+    <!-- the gach ngang -->
+    <a href="https://www.thecoffeehouse.com/" target="blank">
+      Đi tới the coffe house</a
+    >
+    <!-- target="blank"- lien ket ngoai mo trang moi -->
+    <!-- duong link lien ket -->
+    <!-- lien ket noi , truot len truot xuong trang web thoi  -->
+    <!-- lorem100 - noi dung gia lap  -->
+    <p>
+      <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+      <!-- in dam  -->
+      <i
+        >Laboriosam consequatur incidunt qui asperiores corporis mollitia illum
+        rem nisi quas! Tempora distinctio</i
+      >
+      <!-- in nghieng -->
+      <b
+        ><i>
+          Laboriosam consequatur incidunt qui asperiores corporis mollitia illum
+          rem nisi quas! Tempora distinctio labore voluptatum repellat sunt
+          libero unde reiciendis quos nobis in sapiente modi facilis delectus,
+          corrupti vitae eaque cupiditate voluptatibus minus! Totam nam,</i
+        ></b
+      >
+      <br />
+      <!-- enter -->
+      beatae architecto deserunt itaque, aperiam, aliquam neque unde excepturi
+      illo possimus impedit praesentium amet voluptatem? At vero et hic tempore
+      alias quasi vitae, praesentium perferendis doloribus tempora commodi
+      repudiandae sunt impedit blanditiis voluptatem debitis ullam reiciendis
+      doloremque sed dolores magni. Non minima cum facilis, quaerat omnis
+      quisquam. Fugit est ducimus perspiciatis laboriosam distinctio, impedit
+      sed illum aperiam!
+    </p>
+    <!-- danh sach khong co thu tu -->
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <!-- danh sach  co thu tu -->
+    <ol type="">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ol>
+    <!-- đường dẫn tuyệt đôi -copy dia chi hinh  -->
+    <!-- duong dan tuong doi ./ kiet ke file cung cap  -->
+    <!-- ../ nhay ra 1 cap thu muc cha hien tai  -->
+    <img src="./images/fruit.jpg" alt="coffe" />
+    <!-- alt="" ho tro cong cu tim kiéem gg, thêm thuoc tinh voa thẻ dnah cho ng khiem thi
+      -->
+    <!-- thẻ table -->
+    <!-- 8 hang 4 cot  
+    b1; danh het tat ca cot ,hang -->
+    <table border="1px" cellspacing="2" cellpadding="5">
+      <!-- cellspacing khoang cach giua cac o  -->
+      <!-- đầu của bảng -->
+      <thead>
+        <!-- hang cua bang  -->
+        <tr>
+          <!-- cot cua bang     -->
+          <th colspan="2" style="background-color: red">Name</th>
+          <th style="background-color: blue">Type</th>
+          <th style="background-color: green">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- table data -->
+          <td rowspan="4" style="background-color: pink">Traditional coffee</td>
+          <td rowspan="2" style="background-color: pink">vietnam coffe pin</td>
+          <td style="background-color: pink">hot</td>
+          <td style="background-color: pink">60.000</td>
+        </tr>
+        <tr>
+          <td style="background: url(./images/fruit.jpg)">cold</td>
+          <td>28.000</td>
+        </tr>
+        <tr>
+          <td rowspan="2">milk coffe</td>
+          <td>hot</td>
+          <td>38.0000</td>
+        </tr>
+        <tr>
+          <td>cold</td>
+          <td>54.000</td>
+        </tr>
+        <tr>
+          <td rowspan="3">Expensico</td>
+          <td>american coffe</td>
+          <td rowspan="3">hot</td>
+          <td>110.000</td>
+        </tr>
+        <tr>
+          <td>machiato</td>
+          <td rowspan="2">40.000</td>
+        </tr>
+        <tr>
+          <td>cappuchino</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

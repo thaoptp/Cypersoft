@@ -1,0 +1,32 @@
+/* GLOBAL */
+html,body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* HEADER */
+/* 110 */
+#movieNavbar .navbar-nav{
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+#movieNavbar .nav-item::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    display: block;
+    /* #fbbd61,#ec7532 */
+    /* hướng trải: từ trái sang phải
+    trái: vị trí mau bắt đầu
+    phải: vị trí màu kết thúc */
+    background:linear-gradient(to right,#fbbd61,#ec7532) ;
+    box-shadow: 0 0 20px 0 #fbbd61;
+    transition: 0.5s;
+}
+
+#movieNavbar .nav-item:hover::after{
+    width: 100%;
+}
+
+#movieNavbar .nav-item.active::after{
+    width: 100%;
+}

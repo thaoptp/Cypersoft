@@ -1,0 +1,53 @@
+/* desktop-first
+xây dựng hoàn thiện ở màn hình lớn trước sau đó chinh
+sửa UI cho phù hơp với các màn hình nhỏ hơn
+*/
+.desktop-first {
+  background-color: red;
+}
+/* Media query 
+typr : screen(desktop,speech( am thanh ) , print(may in) ,all 
+set tu man hinh lớn trước  roi manf hình nho sau */
+@media screen and (max-width: 1200px) {
+  /* Nếu dùng màn hình <= 1200px thực hiện code phía dứoi 
+ */
+  .desktop-first {
+    background-color: green;
+  }
+}
+@media screen and (max-width: 768px) {
+    /* Nếu dùng màn hình <= 768px thực hiện code phía dứoi 
+   */
+    .desktop-first {
+      background-color:palevioletred;
+    }
+  }
+
+/* mobile-first
+xây dựng hoàn chỉnh màn hình nhỏ 
+sau đó chinh
+sửa UI cho phù hơp với các màn hình lớn  hơn
+set tu man hinh nhỏ trước  roi manf hình lớn sau *
+*/
+.mobile-first{
+    background-color: rgba(88, 4, 88, 0.74);
+}
+@media screen and (min-width: 768px) {
+    /* Nếu dùng màn hình <= 768px thực hiện code phía dứoi 
+   */
+   .mobile-first {
+      background-color:yellow;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    /* Nếu dùng màn hình <= 1200px thực hiện code phía dứoi 
+   */
+   .mobile-first{
+      background-color:orange;
+    }
+  }
+  @media screen and (min-width:900px) and (max-width:1000px){
+      .mobile-first{
+          background-color: blue;
+      }
+  }

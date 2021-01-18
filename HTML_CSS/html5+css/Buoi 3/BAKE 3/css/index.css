@@ -1,0 +1,484 @@
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Montserrat', sans-serif;
+    /* 1rem = 18px */
+    /* font-size: 18px; */
+    /* Nếu không khai báo, mặc định 1rem = 16px */
+}
+
+/* HEADER */
+header{
+    background-color:#4e2a84 ;
+    padding: 20px 0;
+    /* position: fixed absolute; mat kich thuoc cua the  */
+    position: fixed;
+    /* z-index: chỉ đi chung vs position ; */
+    z-index: 100;
+    /* 9999 khi k biet co bao nhiu position  */
+    /* mac dinh lay body */
+    width: 100%;
+}
+header ul{
+    /* Xóa dấu tròn của danh sách */
+    list-style: none;
+}
+
+header ul a{
+    /* xóa gạch dưới của thẻ a */
+    text-decoration: none;
+    color: white;
+}
+
+header li{
+    display: inline;
+}
+
+.header__content{
+    /* căn giữa nội dung của 1 phần chính, căn giữa theo chiều ngang */
+    width: 70%;
+    margin:0 auto;
+
+    /* flex: chỉnh các thẻ con thì khai báo ở thẻ cha gần nhất */
+    display: flex;
+    /* thêm khoảng cách trái phải cho các thẻ con của flex */
+    justify-content: space-around;
+    /* căn chỉnh nội dung của thẻ con theo trục dọc */
+    align-items:center ;
+}
+
+.header__content p{
+    color: white;
+    /* rem: thường dùng cho font-size */
+    /* font-size: 37px; */
+    /* rem cho spacing (margin, padding) của vùng chữ đang dùng rem */
+    font-size: 2.056rem;
+}
+
+/* CAROUSEL */
+.carousel{
+    background-image: url('../img/b3.jpg');
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+
+    /* Căn giữa thẻ con của flex (chỉ dùng khi flex có 1 thẻ con) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel__content{
+    color: white;
+    text-align: center;
+}
+.carousel h1 {
+    animation: upDown 3s linear 0s infinite 
+    /* name : ten hieu ung ,
+    duration chuyen dong trong khonag thoi gian bao nhiu lau 
+    1 chu ky  
+    timing-function-linear : tốc độ của từng  giai doan vd ban dau cham sau nhanh ...
+    delay : bao nhiu giay mới chạy 0s- chạy ngay
+    iteration-count - lặp bnhiu lan - ìninite lăp suat
+    fill-mode - đảo chìu 
+    */
+}
+
+/* INTRO */
+.intro{
+    display: grid;
+    /* Nếu có thẻ con chiếm số hàng nhiều thì khai báo thêm hàng */
+    /* Mặc định chỉ cần khai báo cột */
+    /* Khai báo côt */
+    
+    /* grid-template-columns:100px 300px 200px 500px; */
+    /* grid-template-rows: ; */
+    /* grid-template-columns:25% 25% 25% 25%; */
+    /* grid-template-columns:repeat(4,25%); */
+    /* fr: phân số, repeat(4,1fr) => kích thươc mỗi cột 1/4*/
+    grid-template-columns:repeat(4,1fr);
+
+
+}
+
+.intro__ab1{
+    /* grid-row: ; */
+    /* đường bắt đầu, đường kết thúc của nội dung thẻ con */
+    /* grid-column: 2 / 4 ; */
+
+    /* đường bắt đầu, số lượng cột cần chiếm */
+    grid-column:2 / span 2 ;
+}
+.intro__best{
+    /* grid-column: 1 / 3; */
+    grid-column:1 / span 2 ;
+}
+
+.intro__ab4{
+    /* grid-column: 3 / 5; */
+    grid-column: 3 / span 2;
+}
+
+.intro__item img{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+/* tham khảo slide CSS 12, 21 */
+.intro .intro__item:first-child{
+    background-color: #4e2a84;
+}
+
+.intro .intro__item:nth-child(3){
+    background-color: #ff0e83;
+}
+
+.intro__item{
+    display: flex;
+    align-items: center;
+    /* chỉ dùng được khi thẻ cha còn chỗ trống */
+    justify-content: center;
+}
+.intro__text{
+    /* Thu nhỏ nội dung của thẻ con, giúp thẻ cha có chỗ trống */
+    width: 70%;
+    /* margin: auto; */
+    text-align: center;
+}
+
+/* NUMBER */
+.number{
+    padding: 70px 0;
+}
+.number__content{
+    width: 70%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-weight: bold;
+}
+.number__item p:first-child{
+    font-size: 32px;
+    color: #4e2a84;
+}
+.number__item p:last-child{
+    font-size: 23px;
+}
+
+.number__item{
+    width: 25%;
+}
+
+/* SERVICES */
+.services{
+    text-align: center;
+    padding: 70px 0;
+}
+.services__content{
+    display: flex;
+
+    width: 70%;
+    margin: 0 auto;
+}
+.services__item{
+    padding: 0 15px;
+}
+.services__item i{
+    font-size: 3rem;
+    color:#4e2a84;
+
+    width: 100px;
+    height: 100px;
+    /* căn icon ở giữa theo chiều ngang
+    text-align: center; */
+    /* căn icon ở giữa theo chiều dọc, khi cho line-height bằng hoặc gần bằng height */
+    /* chỉ áp dụng với icon hoặc text có 1 dòng chữ */
+    line-height:100px;
+    border: 1px solid #4e2a84;
+    border-radius: 50%;
+
+    /* transition-property: color; */
+    /* 1s = 1000ms */
+    /* transition-duration: 0.5s; */
+    /* transition-duration: .5s;
+    transition-delay:0s; */
+    /* transition: property duration delay; */
+    transition: color 0.5s 0s;
+
+}
+/* thẻ cha được hover, thẻ con thay đổi */
+.services__item:hover i{
+   color: #ff0e83; 
+}
+
+/* Chưa rê chuột (chưa hover) */
+.services__item button{
+    padding: 12px 27px;
+    background-color: #ff0e83;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    /* khoảng cách giữa các ký tự chữ */
+    letter-spacing: 1px;
+    cursor: pointer;
+    /* transition: all 0.5s 0s; */
+    transition: 0.5s;
+}
+
+/* Đã rê chuột (đã hover) */
+.services__item button:hover{
+    background-color: white;
+    color: black;
+    border-color: #ff0e83;
+}
+
+/* GALLERY */
+
+.gallery__content{
+    display: grid;
+    /* Mỗi cột có kích thước 1fr = 1/4 */
+    grid-template-columns:repeat(4,1fr) ;
+
+    /* thêm khoảng cách giữa các thẻ con của grid */
+    /* grid-gap:30px; */
+    gap: 30px;
+    padding:0 15px;
+}
+
+.gallery__g1{
+    /* grid-column: 1 / 3; */
+    grid-column: 1 / span 2;
+}
+
+.gallery__g6{
+     /* grid-column: 3 / 5; */
+     grid-column: 3 / span 2;
+}
+
+.gallery__item img{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+.gallery__item{
+    position: relative;
+}
+.gallery__overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 132, 163, 0.3);
+    color: white;
+    padding: 40px 30px;
+    text-align: right;
+}
+.gallery__overlay p{
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+}
+
+/* .gallery__overlay h3::before{
+    content: 'The ';
+}
+.gallery__overlay h3::after{
+    content: ' !';
+} */
+
+.gallery__overlay h3::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin-top:10px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.8s;
+}
+.gallery__overlay:hover h3::after{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* chưa hover */
+.gallery__overlay h3{
+    transform: translateY(50px);
+    transition: 0.8s;
+}
+/* đã hover */
+.gallery__overlay:hover h3{
+    transform: translateY(0);
+}
+
+/* TEAM */
+.team__content{
+    width:70%;
+    margin: auto;
+
+    display: grid;
+    /* mỗi cột có kích thước 1fr = 1/3 */
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px 30px;
+}
+.team__item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.team__item{
+    position: relative;
+}
+.team__pink{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff0e83;
+    color: white;
+    padding: 20px;
+    opacity: 1;
+    transition: 0.5s;
+}
+.team__black{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.team__item:hover .team__black{
+    opacity: 1;
+}
+.team__item:hover .team__pink{
+    opacity: 0;
+}
+/* FEEDBACK  */
+.feedback{
+    padding: 70px 0;
+}
+.feedback__content{
+    width: 70%;
+    margin: auto;
+    border: 2px solid #ff0e83;
+    padding: 20px;
+    text-align: center;
+}  
+/* sửa css của thư viện  */
+/* .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+background-color: palevioletred;
+viet cung tren 1 hang 2 cai giong nhau 
+} */
+/* sửa mình feedback thêm . feedback  */
+.feedback .owl-theme .owl-dots .owl-dot.active span{
+   background-color: palevioletred;
+}
+.feedback .owl-theme .owl-dots .owl-dot:hover span{
+background-color: palevioletred;
+}
+
+/* CONTACT  */
+.contact__form form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 70%;
+    margin: auto;
+    gap:15px 30px; 
+    /* thuoc tinh grid  */
+}
+.contact__form form  textarea{
+    /* grid-column: 1/3; */
+    grid-column: 1 /span 2;
+    /* tắt tính năng resize: của textarea  */
+    resize: none;
+}
+.contact__form form button{
+    grid-column: 1 /span 2;
+}
+.contact__form input{
+    font-size: 15px;
+    padding: 1em;
+    /* thi 1 em= 15px phu thuoc vao font-size: ; */
+    transition: 0.5s;
+}
+.contact__form input:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* tat sự kiện focus có viền xanh ,viền đen tuỳ vào brow  */
+
+/* chỉnh màu placeholder  */
+.contact__form  textarea::placeholder{
+    color: palevioletred;
+}
+.contact__map iframe{
+    width: 100%;
+    
+    
+}
+.contact__video{
+    
+}
+/* BACK TO TOP  */
+.backToTop{
+    width: 80px;
+    height: 80px;
+    display: block;
+    /* vi the a la the inline k set dc kich thuoc  */
+    border: 1px solid rgb(17, 100, 224);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 3rem;
+    /* icon nhu text  */
+    color: rgb(17, 100, 224);
+    position: fixed;
+    /* di theo  */
+    bottom: 20px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+    /* opacity:  de an khi ; 
+    - opacity làm trong suốt thẻ và nó vẫn xuất hiện 
+    -visibilyty :hidden khi tag hoặc enter k focus vào thẻ dc 
+    nhung k thuc hien vs transition dc 
+    -display : none  coi như thẻ k tồn tại ,mat kich thuoc , k dung dc 
+     */
+}
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+    /* đoạn code này của thư viện để hiện khi rời khỏi header  */
+  }
+  /* ANIMATION  */
+  @keyframes upDown{
+       /* 1 chu kỳ (1 lan ) xảy ra trong 100 s  */
+       0%{}
+       25%{
+           transform: translateY(-100px) scale(1.2);
+       }
+       50%{
+           transform: translateY(0) scale(1);
+       }
+       75%{
+           transform: translateY(50px) scale(1.2);
+       }
+       100%{
+           transform: translateY(0) scale(1);
+       }
+  }

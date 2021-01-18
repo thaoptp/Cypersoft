@@ -1,0 +1,156 @@
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Montserrat', sans-serif;
+    /* 1rem = 18px */
+    /* font-size: 18px; */
+    /* Nếu không khai báo, mặc định 1rem = 16px */
+}
+
+/* HEADER */
+header{
+    background-color:#4e2a84 ;
+    padding: 20px 0;
+}
+header ul{
+    /* Xóa dấu tròn của danh sách */
+    list-style: none;
+}
+
+header ul a{
+    /* xóa gạch dưới của thẻ a */
+    text-decoration: none;
+    color: white;
+}
+
+header li{
+    display: inline;
+}
+
+.header__content{
+    /* căn giữa nội dung của 1 phần chính, căn giữa theo chiều ngang */
+    width: 70%;
+    margin:0 auto;
+
+    /* flex: chỉnh các thẻ con thì khai báo ở thẻ cha gần nhất */
+    display: flex;
+    /* thêm khoảng cách trái phải cho các thẻ con của flex */
+    justify-content: space-around;
+    /* căn chỉnh nội dung của thẻ con theo trục dọc */
+    align-items:center ;
+}
+
+.header__content p{
+    color: white;
+    /* rem: thường dùng cho font-size */
+    /* font-size: 37px; */
+    /* rem cho spacing (margin, padding) của vùng chữ đang dùng rem */
+    font-size: 2.056rem;
+}
+
+/* CAROUSEL */
+.carousel{
+    background-image: url('../img/b3.jpg');
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+
+    /* Căn giữa thẻ con của flex (chỉ dùng khi flex có 1 thẻ con) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel__content{
+    color: white;
+    text-align: center;
+}
+
+/* INTRO */
+.intro{
+    display: grid;
+    /* Nếu có thẻ con chiếm số hàng nhiều thì khai báo thêm hàng */
+    /* Mặc định chỉ cần khai báo cột */
+    /* Khai báo côt */
+    
+    /* grid-template-columns:100px 300px 200px 500px; */
+    /* grid-template-rows: ; */
+    /* grid-template-columns:25% 25% 25% 25%; */
+    /* grid-template-columns:repeat(4,25%); */
+    /* fr: phân số, repeat(4,1fr) => kích thươc mỗi cột 1/4*/
+    grid-template-columns:repeat(4,1fr);
+
+
+}
+
+.intro__ab1{
+    /* grid-row: ; */
+    /* đường bắt đầu, đường kết thúc của nội dung thẻ con */
+    /* grid-column: 2 / 4 ; */
+
+    /* đường bắt đầu, số lượng cột cần chiếm */
+    grid-column:2 / span 2 ;
+}
+.intro__best{
+    /* grid-column: 1 / 3; */
+    grid-column:1 / span 2 ;
+}
+
+.intro__ab4{
+    /* grid-column: 3 / 5; */
+    grid-column: 3 / span 2;
+}
+
+.intro__item img{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+/* tham khảo slide CSS 12, 21 */
+.intro .intro__item:first-child{
+    background-color: #4e2a84;
+}
+
+.intro .intro__item:nth-child(3){
+    background-color: #ff0e83;
+}
+
+.intro__item{
+    display: flex;
+    align-items: center;
+    /* chỉ dùng được khi thẻ cha còn chỗ trống */
+    justify-content: center;
+}
+.intro__text{
+    /* Thu nhỏ nội dung của thẻ con, giúp thẻ cha có chỗ trống */
+    width: 70%;
+    /* margin: auto; */
+    text-align: center;
+}
+
+/* NUMBER */
+.number{
+    padding: 70px 0;
+}
+.number__content{
+    width: 70%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-weight: bold;
+}
+.number__item p:first-child{
+    font-size: 32px;
+    color: #4e2a84;
+}
+.number__item p:last-child{
+    font-size: 23px;
+}
+
+

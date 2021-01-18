@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="GET">
+        <!-- loai du lieu k can bảo mật thì dung phuong thức get 
+        đỡ tốn chỗ lưu , lưu trên máy chứ k phải server  -->
+        <label for="fullname">Full name</label>
+        <!-- label nhãn của input for truyền id của placeholder  -->
+        <input id="fullname" type="text" placeholder="Enter fullname">
+        <input id="fullname1" type="text" value="nguyen thi khách hang " placeholder="Enter fullname">
+        <input  type="text" value="KH001 " placeholder="Enter fullname" disabled>
+        <!-- disabled ; read k customs dc k tag vo dc  -->
+        <input  type="text" value="KH001 " placeholder="Enter fullname" readonly>
+
+        <!-- readonly tag vô dc  -->
+        <!-- placeholder chu mờ trong form  -->
+        <input type="email" name="email" id="" placeholder="email">
+        <br/>
+        <input type="submit" value="Submit">
+    <input type="password" name="" id="">
+    <input type="number" name="" id="">
+    <input type="tel" name="" id="" pattern="">
+    <!-- pattern : biểu mẫu  -->
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <br/>
+    <!-- textarea oo nhap text nhiu  -->
+    <!-- COMBOBOX xổ các lựa chọn cho người dung -->
+    <label for="Loai xe"></label>
+    <select name="" id="Loai xe">
+       
+        <option value="">Chon loai xe </option>
+        <option value="">A</option>
+        <option value="">B</option>
+        <option value=""><Canvas></Canvas></option>
+
+    </select>
+    <!-- CHECKBOX DC CHON NHIU  -->
+    <input type="checkbox" name="" id="agree">
+<label for="agree">Agree</label>
+  <!-- RADIO CHON 1 CAI  -->
+
+  <input type="radio" name="grender" id="f">
+  <label for="f">Female</label>
+
+  <input type="radio" name="grender" id="f">
+  <label for="f">Male</label>
+
+  <input type="radio" name="grender" id="f">
+  <label for="f">Other</label>
+  <!-- name giống nhau để biết đó là đáp án cùng 1 tập hợp câu trả lời  chỉ dc chọn 1 đáp an  -->
+  <input type="date" name="" id="">
+
+
+  <!-- BUTTON  -->
+  <button type="submit">submit </button>
+  <button type="reset">reset</button>
+  <button type="button">button</button>
+  <input type="button" value="Button">
+  <!-- input button y chang button : button  -->
+  
+
+    </form>
+</body>
+</html>

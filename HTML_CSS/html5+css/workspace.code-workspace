@@ -1,7 +1,19 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".."
+		},
+		{
+			"path": "../../../../Downloads/School/thietkeWeb/BtHTML"
+		},
+		{
+			"path": "../../../../Downloads/School/thietkeWeb/TEMPLATE/HiTech"
+		},
+		{
+			"path": "../../../../Downloads/School/thietkeWeb/TEMPLATE/Bai Tap Them FrozenYogurtShop"
+		},
+		{
+			"path": "../../../../Downloads/School/thietkeWeb/TEMPLATE/BookStore"
 		}
 	]
 }

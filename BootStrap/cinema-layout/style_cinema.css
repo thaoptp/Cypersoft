@@ -1,0 +1,70 @@
+/* GLOBAL */
+html,body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* HEADER */
+/* 110 */
+#movieNavbar .navbar-nav{
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+#movieNavbar .nav-item::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    display: block;
+    /* #fbbd61,#ec7532 */
+    /* hướng trải: từ trái sang phải
+    trái: vị trí mau bắt đầu
+    phải: vị trí màu kết thúc */
+    background:linear-gradient(to right,#fbbd61,#ec7532) ;
+    box-shadow: 0 0 20px 0 #fbbd61;
+    transition: 0.5s;
+}
+
+#movieNavbar .nav-item:hover::after{
+    width: 100%;
+}
+
+#movieNavbar .nav-item.active::after{
+    width: 100%;
+}
+.newIn__img{
+    /* the cha  */
+    position: relative;
+    overflow: hidden;
+    /* che the con ve hinh va hieu ung ngoai the cha  */
+    border-radius: 10px;
+}
+.newIn__overlay{
+    width: 185%;
+    height: 100%;
+    /* the con phủ thẻ cha  */
+    position: absolute;
+    top :0;
+    left: 0;
+    background: linear-gradient(to bottom,#fbbd61,#ec7532);
+    /* lam hinh xeo */
+    /* chua hover  day ra khoi the cha*/
+    transform: skew(30deg) translateX(-122%);
+    /* translate: X keo vi tri theo chieu ngang ;  */
+    border-radius: 10px;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+.newIn__img:hover .newIn__overlay{
+    transform: skew(30deg) translateX(-20%);
+}
+/* REPONSIVE  
+min-width : 576px - boostrap 
+text-right.text-md-right
+mx-md-0
+dnone,d-flex display 
+*/
+@media screen and ( max-width:575.98px){
+    /* nen lay gan bang 576  */
+    .showTimes img {
+        width: 100%;
+    }
+}
